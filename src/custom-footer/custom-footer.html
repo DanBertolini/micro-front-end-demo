@@ -1,0 +1,53 @@
+<template>
+    <head>
+        <link href="/node_modules/materialize-css/dist/css/materialize.min.css" rel="stylesheet">
+        <link href="/src/assets/css/stylesheet.css" rel="stylesheet">
+        <script src="/node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    </head>
+    <style>
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+
+    <footer class="page-footer orange">
+		<div class="footer-copyright row">
+			<div style="padding: 10px;">
+				© 2019 Avanade Inc. All Rights Reserved
+			</div>
+		</div>
+	</footer>
+</template>
+<script>
+    (function (window, document, undefined) {
+        var self = (document._currentScript || document.currentScript).ownerDocument;
+        var template = self.querySelector('template').content;
+        if (window.ShadowDOMPolyfill) {
+            WebComponents.ShadowCSS.shimStyling(template, 'custom-footer');
+        }
+
+        class CustomFooterComponent extends HTMLElement {
+            constructor() {
+                super();
+            }
+
+            connectedCallback() {
+                var log = this.getAttribute('log');
+                var showFrameworkObservable = this.getAttribute('showFrameworkObservable');
+
+                var shadowRoot = this.attachShadow({
+                    mode: 'open'
+                });
+
+                var clone = document.importNode(template, true);
+                shadowRoot.appendChild(clone);
+
+                console.log(log);
+            }
+        }
+        window.customElements.define('custom-footer', CustomFooterComponent);
+
+    }(window, document));
+</script>

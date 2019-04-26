@@ -1,0 +1,41 @@
+.my-account-data {
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    text-align: center;
+    width: 25%;
+    padding: 25px;
+    margin: auto;
+    margin-top: 10%;
+}
+
+.my-account-data hr {
+    border: 0;
+    height: .75px;
+    background-image: linear-gradient(to right, rgb(0, 0, 0, 0), rgb(0, 0, 0, .5), rgb(0, 0, 0, 0));
+}
+
+.my-account-data span {
+    display: block;
+}
+
+.my-account-data span.patrimonio {
+    font-size: 16px;
+}
+
+.my-account-data span.patrimonio-value {
+    font-size: 24px;
+}
+
+.my-account-data span.patrimonio-value i {
+    font-size: 12px;
+}
+
+.my-account-data span.saldo {
+    font-size: 10px;
+}
+
+.my-account-data span.saldo-value {
+    font-size: 15px;
+    color: #486da8;
+}

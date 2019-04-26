@@ -1,0 +1,63 @@
+.text-alignment {
+    text-align: center;
+}
+
+.btn-transaction {
+    width: 40%;
+    display: inline-block;
+    color: #777;
+}
+.execute-transaction {
+    width: 100%;
+    border: 0;
+}
+
+.buy {
+    background-color: royalblue;
+}
+
+.sell {
+    background-color: sienna;
+}
+
+.active-buy {
+    border-bottom: 1px solid royalblue;
+}
+
+.active-sell {
+    border-bottom: 1px solid sienna;
+}
+
+.no-asset {
+    text-align: center;
+    margin: 15%;
+}
+
+.asset-value {
+    position: relative;
+    left: 10%;
+    font-size: 25px;
+}
+
+.asset-code {
+    position: relative;
+    right: 10%;
+    font-size: 30px;
+}
+
+.input-field {
+    text-align: center;
+}
+
+.input-field div {
+    width: 45%;
+    display: inline-block;
+    margin: 5px;
+    text-align:left;
+}
+
+#ballot hr {
+    border: 0;
+    height: .75px;
+    background-image: linear-gradient(to right, rgb(0, 0, 0, 0), rgb(0, 0, 0, .5), rgb(0, 0, 0, 0));
+}
